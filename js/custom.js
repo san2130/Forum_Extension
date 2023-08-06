@@ -13,13 +13,12 @@ function display() {
   if(call>0)
   {
       var inject = document.getElementById('posts');
-      inject.innerHTML = "<p id='load'>Loading....</p>";
+      inject.innerHTML = "<div class='lds-dual-ring'></div>";
       inject.classList.add("loading");
   }
   callAPI().then((data) => {
       apiData = data.data;
       var inject = document.getElementById('posts');
-      console.log(inject);
       inject.classList.remove("loading");
       inject.innerHTML = apiData;
     });
