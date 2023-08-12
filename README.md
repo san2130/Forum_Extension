@@ -1,5 +1,5 @@
 # Forum Extension
-## Tired of refreshing the forum notice board?
+## Tired of refreshing the forum notice board? Get notified when there are any unread posts.
 
 ### Features
 * Background service worker will fetch latest data every minute and <b>"NEW"</b> will be visible on top of the extension icon if there are any <b>unread</b> posts.
