@@ -9,6 +9,14 @@ async function callAPI() {
   };
 }
 
+function setText(badge) {
+  chrome.action.setBadgeText({
+      text: badge,
+    }, () => {
+      console.log('Finished setting badge text')
+  });
+}
+
 function display() {
   if(call>0)
   {
