@@ -2,7 +2,7 @@
 ## Tired of refreshing the forum notice board?
 
 ### Features
-* Background service worker will fetch latest data every minute and <b>"NEW"</b> will be visible on top of the extension icon if there are any new posts.
+* Background service worker will fetch latest data every minute and <b>"NEW"</b> will be visible on top of the extension icon if there are any <b>unread</b> posts.
 * Clicking on the extension will show the forum notice board page in a popup pane.
 * Clicking on any link in the popup will open up the link in a new tab
 * The popup will also refresh once every minute, if kept opened. Closing and opening the popup will always show the latest data.
