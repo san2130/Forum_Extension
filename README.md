@@ -1,4 +1,4 @@
-# Forum_Extension
+# Forum Extension
 ## Tired of refreshing the forum notice board?
 
 ### Features
