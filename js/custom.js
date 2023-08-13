@@ -26,6 +26,11 @@ function display() {
   }
   callAPI().then((data) => {
       apiData = data.data;
+      var flag = apiData.includes("topic-unread");
+      if(!flag)
+      {
+          setText("");
+      }
       var inject = document.getElementById('posts');
       inject.classList.remove("loading");
       inject.innerHTML = apiData;
