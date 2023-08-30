@@ -10,6 +10,17 @@ body {
     justify-content: center;
 }
 
+.loading2 {
+  display: none;
+}
+
+.loaded {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .lds-dual-ring {
     display: inline-block;
     width: 80px;

@@ -9,6 +9,10 @@ async function callAPI() {
   };
 }
 
+async function markReadAPI() {
+  await fetch("https://www.placement.iitbhu.ac.in/forum/mark_all_as_read/");
+}
+
 function setText(badge) {
   chrome.action.setBadgeText({
       text: badge,
@@ -17,14 +21,24 @@ function setText(badge) {
   });
 }
 
+function markall() {
+  markReadAPI();
+  setText("");
+  console.log("Marked all as read");
+}
+
 function display() {
   if(call>0)
   {
       var inject = document.getElementById('posts');
+      var read = document.getElementById('read');
+      read.classList.remove("loaded");
+      read.classList.add("loading2");
       inject.innerHTML = "<div class='lds-dual-ring'></div>";
       inject.classList.add("loading");
   }
   callAPI().then((data) => {
+      document.getElementById("mark").addEventListener("click", markall);
       apiData = data.data;
       var flag = apiData.includes("topic-unread");
       if(!flag)
@@ -32,6 +46,9 @@ function display() {
           setText("");
       }
       var inject = document.getElementById('posts');
+      var read = document.getElementById('read');
+      read.classList.remove("loading2");
+      read.classList.add("loaded");
       inject.classList.remove("loading");
       inject.innerHTML = apiData;
     });
